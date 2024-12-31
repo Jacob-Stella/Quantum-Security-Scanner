@@ -1,0 +1,11 @@
+ip.src,ip.dst,tcp.srcport,tcp.dstport,tls.handshake.type,tls.record.version,tls.handshake.version,tls.handshake.ciphersuite,frame.protocols
+,,"4762","443","1","0x0303","0x0303","0xc02c","eth:ethertype:ipv6:tcp:tls"
+,,"443","4762","2","0x0303","0x0303","0xc02c","eth:ethertype:ipv6:tcp:tls"
+"192.168.1.76","52.182.143.213","4763","443","1","0x0303","0x0303","0xc02c","eth:ethertype:ip:tcp:tls"
+"52.182.143.213","192.168.1.76","443","4763","2","0x0303","0x0303","0xc030","eth:ethertype:ip:tcp:tls:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:tls:x509ce:x509ce:pkix1implicit:x509ce:x509ce:x509ce:x509ce:x509ce:x509ce:pkix1explicit:x509ce:x509ce:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509ce:x509ce:x509ce:x509ce:x509ce:pkix1implicit:x509ce:x509ce:ocsp:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509ce:x509ce:x509ce:x509ce:x509ce:x509ce:x509ce:ocsp"
+"192.168.1.76","140.82.112.21","4767","443","1","0x0301","0x0303","0x1301","eth:ethertype:ip:tcp:tls"
+"140.82.112.21","192.168.1.76","443","4767","2","0x0303","0x0303","0x1301","eth:ethertype:ip:tcp:tls"
+,,"4769","443","1","0x0301","0x0303","0xc02c","eth:ethertype:ipv6:tcp:tls"
+,,"443","4769","2","0x0303","0x0303","0xc02b","eth:ethertype:ipv6:tcp:tls"
+,,,,"1",,"0x0303","0x1301","eth:ethertype:ipv6:udp:quic:tls"
+,,,,"2",,"0x0303","0x1301","eth:ethertype:ipv6:udp:quic:tls"

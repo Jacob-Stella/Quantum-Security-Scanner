@@ -3,7 +3,7 @@ import subprocess
 def capture_traffic():
     tshark_command = [
         'tshark',
-        '-i', 'Wi-Fi',
+        '-i', 'Wi-Fi 2',  # Make sure 'Wi-Fi 2' is the correct interface name on your system.
         '-a', 'duration:30',
         '-Y', '((ssl.handshake.type == 1 or ssl.handshake.type == 2 or tls.handshake.type == 1 or tls.handshake.type == 2))',
         '-T', 'fields',
@@ -21,9 +21,11 @@ def capture_traffic():
         '-E', 'quote=d',
         '-E', 'occurrence=f'
     ]
-    result = subprocess.run(tshark_command, capture_output=True, text=True, check=True)
-    print(result.stdout)
-    print(result.stderr)
+    output_file_path = 'data/traffic_output.csv'
+    with open(output_file_path, 'w') as file:
+        result = subprocess.run(tshark_command, stdout=file, stderr=subprocess.PIPE, text=True)
+        if result.stderr:
+            print("Errors encountered during capture:", result.stderr)
 
 if __name__ == '__main__':
     capture_traffic()
