@@ -7,4 +7,4 @@ Brief description of the project and its purpose.
 Instructions on setting up the environment, installing dependencies, etc.
 
 ## Usage
-How to run the scripts and use the repository.
+How to run the scripts and use the repository.      
